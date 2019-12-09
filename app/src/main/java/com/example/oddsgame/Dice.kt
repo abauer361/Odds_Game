@@ -16,9 +16,8 @@ class Dice : MenuActivity() {
         setContentView(R.layout.activity_dice)
 
         var mp = MediaPlayer.create(this, R.raw.dice_roll)
-        val sides = intent.extras?.get("sides")
+        var sides = intent.extras?.get("sides").toString().toInt()
         var dice_image: ImageView
-        var r = sides + 1
         dice_image = four_dice
 
         when (sides){
@@ -42,16 +41,16 @@ class Dice : MenuActivity() {
 
         roll_button.setOnClickListener(object : View.OnClickListener{
             override fun onClick(view: View?) {
-                val roll = (0 until (sides + 1)).random()
+                val roll = (1 until (sides + 1)).random()
 
                 Toast.makeText(applicationContext,"You Rolled a " + roll + "!", Toast.LENGTH_SHORT).show()
 
                 mp.start()
                 var rotate = RotateAnimation(0f, 180f, RotateAnimation.RELATIVE_TO_SELF, 0.5f, RotateAnimation.RELATIVE_TO_SELF, 0.5f)
-                rotate.duration = 500
+                rotate.duration = 5000
                 dice_image.startAnimation(rotate)
 
-                rotate = RotateAnimation(180f, 0f, RotateAnimation.RELATIVE_TO_SELF, 0.5f, RotateAnimation.RELATIVE_TO_SELF, 0.5f)
+                rotate = RotateAnimation(0f, 180f, RotateAnimation.RELATIVE_TO_SELF, 0.5f, RotateAnimation.RELATIVE_TO_SELF, 0.5f)
                 dice_image.startAnimation(rotate)
             }
         })
