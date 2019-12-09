@@ -11,10 +11,10 @@ import java.util.*
 
 class RNG : MenuActivity() {
 
-    var et_min: EditText? = null
-    var et_max: EditText? = null
-    var b_generator: Button? = null
-    var tv_output: TextView? = null
+    private var et_min: EditText? = null
+    private var et_max: EditText? = null
+    private var b_generator: Button? = null
+    private var tv_output: TextView? = null
 
     var r: Random? = null
     var min: Int = 0
@@ -23,7 +23,7 @@ class RNG : MenuActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_rng)
 
         r = Random()
 
