@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.oddsgame.RNG">
+
+    <Button
+        android:id="@+id/b_generator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="GENERATE A RANDOM NUMBER" />
+
+    <EditText
+        android:id="@+id/et_min"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/et_max"
+        android:ems="10"
+        android:hint="min"
+        android:gravity="center"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_max"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/b_generator"
+        android:ems="10"
+        android:hint="max"
+        android:gravity="center"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/RNG"
+        android:text="Random(min, max)"
+        android:textSize="45dp"
+        android:layout_above="@+id/et_min"
+        />
+
+    <TextView
+        android:id="@+id/tv_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/b_generator"
+        android:textSize="32dp"
+        android:layout_centerHorizontal="true"
+        android:text="" />
+</RelativeLayout>

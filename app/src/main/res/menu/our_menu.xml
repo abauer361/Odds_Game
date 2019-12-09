@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/coin"
+        android:title="Coin Flip"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/rng"
+        android:title="RNG Generator"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/dice"
+        android:title="Dice Roller"
+        app:showAsAction="never" >
+
+        <menu>
+
+            <item android:id="@+id/four"
+                android:title="Four Sided" />
+
+            <item android:id="@+id/six"
+                android:title="Six Sided" />
+
+            <item android:id="@+id/eight"
+                android:title="Eight Sided" />
+
+            <item android:id="@+id/ten"
+                android:title="Ten Sided" />
+
+            <item android:id="@+id/twenty"
+                android:title="Twenty Sided" />
+
+        </menu>
+    </item>
+
+</menu>
