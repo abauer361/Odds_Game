@@ -15,7 +15,7 @@ class Dice : MenuActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dice)
 
-        var mp = MediaPlayer.create(this, R.raw.dice_roll)
+        var mp: MediaPlayer? = MediaPlayer.create(this, R.raw.dice_roll)
         var sides = intent.extras?.get("sides").toString().toInt()
         var dice_image: ImageView
         dice_image = four_dice
@@ -45,7 +45,7 @@ class Dice : MenuActivity() {
 
                 Toast.makeText(applicationContext,"You Rolled a " + roll + "!", Toast.LENGTH_SHORT).show()
 
-                mp.start()
+                mp?.start()
                 var rotate = RotateAnimation(0f, 180f, RotateAnimation.RELATIVE_TO_SELF, 0.5f, RotateAnimation.RELATIVE_TO_SELF, 0.5f)
                 rotate.duration = 5000
                 dice_image.startAnimation(rotate)
