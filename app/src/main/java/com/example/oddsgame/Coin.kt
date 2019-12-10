@@ -1,5 +1,6 @@
 package com.example.oddsgame
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,6 +19,7 @@ class Coin : MenuActivity() {
         val button = findViewById<Button>(R.id.btnFlip)
         val imageView = findViewById<ImageView>(R.id.coin)
         val random = Random()
+        var mp: MediaPlayer? = MediaPlayer.create(this, R.raw.coinflip)
 
         button.setOnClickListener(object : View.OnClickListener{
             override fun onClick(view: View?) {
@@ -34,7 +36,7 @@ class Coin : MenuActivity() {
 
                 // rotation
                 var rotate = RotateAnimation(0f, 360f, RotateAnimation.RELATIVE_TO_SELF, 0.5f, RotateAnimation.RELATIVE_TO_SELF, 0.5f)
-
+                mp?.start()
 
                 rotate.duration = 1000
 
